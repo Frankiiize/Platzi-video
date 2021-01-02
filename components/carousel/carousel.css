@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 /* carouse */
 .carousel {
     width: 100%;
@@ -5,6 +10,17 @@
     overflow-y: auto;
     padding: 30px;
     position: relative;
+    scroll-behavior: smooth;
+}
+.slice__container{
+    width: 100vw;
+    height: 404px;
+    position: absolute;
+    display: grid;
+    grid-template-columns: 32px 1fr 32px;
+    grid-template-rows: 1fr;
+    justify-content: space-between;
+    align-items: flex-end;
 }
 .carousel::-webkit-scrollbar{
     width: 8px;
@@ -30,6 +46,44 @@
     margin: 70px 0px;
     padding-bottom: 10px; 
     
+}
+.arrow{
+    height: 32px;
+    width: 32px;
+    /* position: absolute; */
+    z-index: 1;
+    /* top: 100px */;
+    /* top: calc(404px/2); */
+    /* filter: invert(); */
+    border: none;
+    color: transparent;
+    appearance: none;
+    display: block;
+    background: none;
+    outline: none;
+}
+.arrow:hover{
+    transform: scale3d(1.5,1.5,1.5);
+    cursor: pointer;
+    transition: 450ms;
+    border: none;
+    outline: none;  
+}
+.arrow:active{
+    transform: scale(1) ;
+}
+.letf{
+    background-image: url(../../assets/icons/313-arrow-left.png);
+    grid-column:1/2;
+    left: 10px;
+    position: inherit;
+}
+.right{
+    background-image: url(../../assets/icons/309-arrow-right.png);
+    grid-column:-1/-2;
+    position: inherit;
+    left: -32px;
+
 }
 .carousel-item {
     width: 200px;
