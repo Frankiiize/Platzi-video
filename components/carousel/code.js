@@ -4,7 +4,6 @@
 
  buttonRight.onclick = function () {
    document.getElementById('carousel').scrollBy({
-    
     left: 300,
     behavior: 'smooth'
   });
